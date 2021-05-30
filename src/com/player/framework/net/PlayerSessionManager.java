@@ -8,16 +8,16 @@ public enum PlayerSessionManager {
 	INSTANCE;
 
 	private ConcurrentMap<Long, IdSession> Storage = new ConcurrentHashMap<>();
-
-	public IdSession getSessionByPlayerId(long playerId) {
-		return this.Storage.get(playerId);
-	}
-
-	public long getPlayerIdBySession(IdSession session) {
+	
+	public long getPlayerId(IdSession session) {
 		if (session != null) {
 			return session.getPlayerId();
 		}
 		return 0;
+	}
+
+	public IdSession getPlayerSession(long playerId) {
+		return this.Storage.get(playerId);
 	}
 
 	public void setPlayerSession(long playerId, IdSession session) {

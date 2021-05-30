@@ -80,7 +80,7 @@ public enum MessageDispatcherFactory implements IoDispatcher {
 	}
 
 	public void onSessionClosed(IdSession session) {
-		PlayerSessionManager.INSTANCE.getPlayerIdBySession(session);
+		PlayerSessionManager.INSTANCE.getPlayerId(session);
 	}
 
 	private Object[] getParams(IdSession session, Message message, Class<?>[] params) {

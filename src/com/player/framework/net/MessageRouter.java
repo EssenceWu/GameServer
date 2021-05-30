@@ -6,7 +6,7 @@ import com.player.framework.serializer.Message;
 public class MessageRouter {
 
 	public static void send(long playerId, Message message) {
-		IdSession session = PlayerSessionManager.INSTANCE.getSessionByPlayerId(playerId);
+		IdSession session = PlayerSessionManager.INSTANCE.getPlayerSession(playerId);
 		send(session, message);
 	}
 
