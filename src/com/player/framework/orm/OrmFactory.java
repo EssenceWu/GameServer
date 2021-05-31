@@ -29,7 +29,7 @@ public enum OrmFactory {
 						clazz.getSimpleName());
 				this.sqlSessionFactory.put(clazz, sqlSessionFactory);
 			}
-			System.out.println("Loading mysql service successfully!");
+			System.out.println("Loading mysql service[" + sqlSessionFactory.size() + "] successfully!");
 		} catch (Exception e) {
 			throw new Exception(e);
 		}

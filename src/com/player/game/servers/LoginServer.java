@@ -5,6 +5,7 @@ import org.apache.ibatis.session.SqlSession;
 import com.player.framework.net.IdSession;
 import com.player.framework.net.MessageRouter;
 import com.player.framework.net.PropertySession;
+import com.player.framework.orm.Mapper;
 import com.player.framework.orm.OrmFactory;
 import com.player.framework.orm.OrmNotifyFactory;
 import com.player.framework.util.ToolUtil;
@@ -35,11 +36,9 @@ public class LoginServer {
 			MessageRouter.send(session, resGuestLogin);
 			return;
 		}
-		SqlSession sqlSession = OrmFactory.INSTANCE.getSqlSession("user");
-		UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-		UserModel user = userMapper.getUserbyGuestKey(request.guestKey);
-		sqlSession.commit();
-		sqlSession.close();
+		Mapper mapper = OrmFactory.INSTANCE.getMapper(UserMapper.class);
+		UserModel user = UserMapper.class.cast(mapper.getObject()).getUserbyGuestKey(request.guestKey);
+		mapper.commit();
 		if (user == null) {
 			user = new UserModel();
 			user.setId(8848);
@@ -48,8 +47,8 @@ public class LoginServer {
 			user.setGuestKey(request.guestKey);
 			user.setIsGuest(1);
 			user.setStatus(1);
-			OrmNotifyFactory.add(session.getAttribute(PropertySession.UUID), userMapper.class, "add", user);
 			session.setAttribute(PropertySession.UID, user.getId());
+			OrmNotifyFactory.add(session, UserMapper.class, "add", user);
 			uinfo.unick = user.getUnick();
 			resGuestLogin.uinfo = uinfo;
 		} else {

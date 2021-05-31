@@ -42,7 +42,7 @@ public class GameServer {
 			// 任务调度工厂
 			TaskScheduleFactory.INSTANCE.initialize();
 			// 定时调度工厂
-			// QuartzFactory.INSTANCE.initialize(ServerPath.QUARTZ_PATH);
+			QuartzFactory.INSTANCE.initialize(ServerPath.QUARTZ_PATH);
 			// 通信调度工厂
 			NettyFactory.INSTANCE.initialize(serverConfig.getServerPort());
 
