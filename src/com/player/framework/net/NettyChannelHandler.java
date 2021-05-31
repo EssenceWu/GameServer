@@ -25,9 +25,8 @@ public class NettyChannelHandler extends ChannelInboundHandlerAdapter {
 	}
 
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-		Message message = (Message) msg;
 		IdSession session = ChannelSession.getPlayerSession(ctx.channel());
-		this.messageDispatcher.dispatch(session, message);
+		this.messageDispatcher.dispatch(session, Message.class.cast(msg));
 	}
 
 	public void channelInactive(ChannelHandlerContext ctx) throws Exception {

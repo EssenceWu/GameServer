@@ -1,0 +1,18 @@
+2021-05-31 23:40:13,287 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2021-05-31 23:40:13,295 [main] INFO  [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-05-31 23:40:13,295 [main] INFO  [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.3.2 created.
+2021-05-31 23:40:13,296 [main] INFO  [org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin] - Registering Quartz Job Initialization Plug-in.
+2021-05-31 23:40:13,297 [main] INFO  [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2021-05-31 23:40:13,297 [main] INFO  [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 30 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-05-31 23:40:13,306 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'QuartzScheduler' initialized from the specified file : 'quartz.properties' from the class resource path.
+2021-05-31 23:40:13,306 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.3.2
+2021-05-31 23:40:13,314 [main] INFO  [org.quartz.xml.XMLSchedulingDataProcessor] - Parsing XML file: job.xml with systemId: job.xml
+2021-05-31 23:40:13,360 [main] INFO  [org.quartz.xml.XMLSchedulingDataProcessor] - Adding 0 jobs, 0 triggers.
+2021-05-31 23:40:13,360 [main] INFO  [org.quartz.core.QuartzScheduler] - Scheduler QuartzScheduler_$_NON_CLUSTERED started.

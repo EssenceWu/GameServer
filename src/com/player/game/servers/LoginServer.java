@@ -1,7 +1,5 @@
 package com.player.game.servers;
 
-import org.apache.ibatis.session.SqlSession;
-
 import com.player.framework.net.IdSession;
 import com.player.framework.net.MessageRouter;
 import com.player.framework.net.PropertySession;
@@ -37,25 +35,26 @@ public class LoginServer {
 			return;
 		}
 		Mapper mapper = OrmFactory.INSTANCE.getMapper(UserMapper.class);
-		UserModel user = UserMapper.class.cast(mapper.getObject()).getUserbyGuestKey(request.guestKey);
-		mapper.commit();
+		UserMapper userMapper = UserMapper.class.cast(mapper.getObject());
+		UserModel user = userMapper.getUserbyGuestKey(request.guestKey);
+		mapper.close();
 		if (user == null) {
 			user = new UserModel();
-			user.setId(8848);
+			user.setId(ToolUtil.getId());
 			user.setUname("сн©м" + ToolUtil.getRandom(1000, 9999));
 			user.setUnick(Config.name[ToolUtil.getRandom(0, 9)]);
 			user.setGuestKey(request.guestKey);
 			user.setIsGuest(1);
 			user.setStatus(1);
-			session.setAttribute(PropertySession.UID, user.getId());
 			OrmNotifyFactory.add(session, UserMapper.class, "add", user);
+			resGuestLogin.status = Resonpose.OK;
 			uinfo.unick = user.getUnick();
 			resGuestLogin.uinfo = uinfo;
 		} else {
 			if (user.getStatus() == 0) {
 				resGuestLogin.status = Resonpose.UserIsFreeze;
 				resGuestLogin.uinfo = null;
-			} else if (user.getIsGuest() != 1) {
+			} else if (user.getIsGuest() == 0) {
 				resGuestLogin.status = Resonpose.UserIsNotGuest;
 				resGuestLogin.uinfo = null;
 			} else {
@@ -77,10 +76,10 @@ public class LoginServer {
 			MessageRouter.send(session, resUserLogin);
 			return;
 		}
-		SqlSession sqlSession = OrmFactory.INSTANCE.getSqlSession();
-		UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+		Mapper mapper = OrmFactory.INSTANCE.getMapper(UserMapper.class);
+		UserMapper userMapper = UserMapper.class.cast(mapper.getObject());
 		UserModel user = userMapper.getUserByUname(request.uname);
-		sqlSession.close();
+		mapper.close();
 		if (user == null || !request.upwd.equals(user.getUpwd())) {
 			resUserLogin.status = Resonpose.UnameOrUpwdError;
 			resUserLogin.uinfo = null;

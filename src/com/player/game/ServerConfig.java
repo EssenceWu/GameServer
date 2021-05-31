@@ -2,9 +2,32 @@ package com.player.game;
 
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.player.framework.util.XmlWrapper;
 
 @Root(name = "server")
 public class ServerConfig {
+
+	private static volatile ServerConfig serverConfig;
+	private static Logger logger = LoggerFactory.getLogger(ServerConfig.class);
+
+	public static ServerConfig getInstance() {
+		if (serverConfig != null) {
+			return serverConfig;
+		}
+		synchronized (ServerConfig.class) {
+			if (serverConfig == null) {
+				try {
+					serverConfig = XmlWrapper.load(ServerPath.SERVER_PATH, ServerConfig.class);
+				} catch (Exception e) {
+					logger.error("", e);
+				}
+			}
+		}
+		return serverConfig;
+	}
 
 	/** ·þÎñÆ÷id */
 	@Element(required = true)

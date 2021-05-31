@@ -15,7 +15,7 @@
 		useGeneratedKeys="true" keyProperty="id">
 		insert
 		into
-		`user`(uname,upwd,unick,guestKey,isGuest,status)
-		values(#{uname},#{upwd},#{unick},#{guestKey},#{isGuest},#{status})
+		`user`(id,uname,upwd,unick,guestKey,isGuest,status)
+		values(#{id},#{uname},#{upwd},#{unick},#{guestKey},#{isGuest},#{status})
 	</insert>
 </mapper>
