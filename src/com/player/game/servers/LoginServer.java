@@ -48,7 +48,7 @@ public class LoginServer {
 			user.setGuestKey(request.guestKey);
 			user.setIsGuest(1);
 			user.setStatus(1);
-			OrmNotifyFactory.add(1, "user", UserMapper.class, "add", user);
+			OrmNotifyFactory.add(session.getAttribute(PropertySession.UUID), userMapper.class, "add", user);
 			session.setAttribute(PropertySession.UID, user.getId());
 			uinfo.unick = user.getUnick();
 			resGuestLogin.uinfo = uinfo;
