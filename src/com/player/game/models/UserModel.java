@@ -2,19 +2,11 @@ package com.player.game.models;
 
 public class UserModel {
 
-	private int id;
-	private String uname;
-	private String upwd;
-	private String unick;
-	private String guestKey;
-	private int isGuest;
-	private int status;
-
 	public UserModel() {
 		super();
 	}
 
-	public UserModel(int id, String uname, String upwd, String unick, String guestKey, int isGuest, int status) {
+	public UserModel(long id, String uname, String upwd, String unick, String guestKey, int isGuest, int status) {
 		super();
 		this.id = id;
 		this.uname = uname;
@@ -25,11 +17,19 @@ public class UserModel {
 		this.status = status;
 	}
 
-	public int getId() {
+	private long id;
+	private String uname;
+	private String upwd;
+	private String unick;
+	private String guestKey;
+	private int isGuest;
+	private int status;
+
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

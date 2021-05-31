@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import com.player.framework.serializer.annotation.MessageMeta;
+import com.player.framework.annotation.message.MessageMeta;
 import com.player.framework.util.ClassScanner;
 
 public enum MessageFactory {
@@ -18,7 +18,7 @@ public enum MessageFactory {
 	public void initialize(String packageName) throws Exception {
 		try {
 			System.out.println("Loading message meta...");
-			Set<Class<?>> result = ClassScanner.getSubClass(packageName, Message.class);
+			Set<Class<?>> result = ClassScanner.getDeclaredSubClass(packageName, Message.class);
 			for (Class<?> clazz : result) {
 				MessageMeta meta = clazz.getAnnotation(MessageMeta.class);
 				if (meta == null) {

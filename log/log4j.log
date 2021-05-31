@@ -1,0 +1,733 @@
+2021-05-30 11:30:12,585 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2021-05-30 11:30:12,594 [main] INFO  [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-05-30 11:30:12,594 [main] INFO  [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.3.2 created.
+2021-05-30 11:30:12,595 [main] INFO  [org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin] - Registering Quartz Job Initialization Plug-in.
+2021-05-30 11:30:12,596 [main] INFO  [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2021-05-30 11:30:12,596 [main] INFO  [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 30 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-05-30 11:30:12,596 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'QuartzScheduler' initialized from the specified file : 'quartz.properties' from the class resource path.
+2021-05-30 11:30:12,596 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.3.2
+2021-05-30 11:30:12,609 [main] INFO  [org.quartz.xml.XMLSchedulingDataProcessor] - Parsing XML file: job.xml with systemId: job.xml
+2021-05-30 11:30:12,655 [main] INFO  [org.quartz.xml.XMLSchedulingDataProcessor] - Adding 0 jobs, 0 triggers.
+2021-05-30 11:30:12,655 [main] INFO  [org.quartz.core.QuartzScheduler] - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2021-05-30 11:55:16,048 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2021-05-30 11:55:16,057 [main] INFO  [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-05-30 11:55:16,057 [main] INFO  [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.3.2 created.
+2021-05-30 11:55:16,057 [main] INFO  [org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin] - Registering Quartz Job Initialization Plug-in.
+2021-05-30 11:55:16,058 [main] INFO  [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2021-05-30 11:55:16,059 [main] INFO  [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 30 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-05-30 11:55:16,059 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'QuartzScheduler' initialized from the specified file : 'quartz.properties' from the class resource path.
+2021-05-30 11:55:16,059 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.3.2
+2021-05-30 11:55:16,070 [main] INFO  [org.quartz.xml.XMLSchedulingDataProcessor] - Parsing XML file: job.xml with systemId: job.xml
+2021-05-30 11:55:16,118 [main] INFO  [org.quartz.xml.XMLSchedulingDataProcessor] - Adding 0 jobs, 0 triggers.
+2021-05-30 11:55:16,118 [main] INFO  [org.quartz.core.QuartzScheduler] - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2021-05-30 12:13:10,404 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2021-05-30 12:13:10,414 [main] INFO  [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-05-30 12:13:10,414 [main] INFO  [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.3.2 created.
+2021-05-30 12:13:10,414 [main] INFO  [org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin] - Registering Quartz Job Initialization Plug-in.
+2021-05-30 12:13:10,415 [main] INFO  [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2021-05-30 12:13:10,416 [main] INFO  [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 30 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-05-30 12:13:10,416 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'QuartzScheduler' initialized from the specified file : 'quartz.properties' from the class resource path.
+2021-05-30 12:13:10,416 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.3.2
+2021-05-30 12:13:10,423 [main] INFO  [org.quartz.xml.XMLSchedulingDataProcessor] - Parsing XML file: job.xml with systemId: job.xml
+2021-05-30 12:13:10,469 [main] INFO  [org.quartz.xml.XMLSchedulingDataProcessor] - Adding 0 jobs, 0 triggers.
+2021-05-30 12:13:10,470 [main] INFO  [org.quartz.core.QuartzScheduler] - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2021-05-30 12:15:40,972 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2021-05-30 12:15:40,980 [main] INFO  [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-05-30 12:15:40,980 [main] INFO  [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.3.2 created.
+2021-05-30 12:15:40,981 [main] INFO  [org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin] - Registering Quartz Job Initialization Plug-in.
+2021-05-30 12:15:40,982 [main] INFO  [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2021-05-30 12:15:40,982 [main] INFO  [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 30 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-05-30 12:15:40,982 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'QuartzScheduler' initialized from the specified file : 'quartz.properties' from the class resource path.
+2021-05-30 12:15:40,982 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.3.2
+2021-05-30 12:15:40,991 [main] INFO  [org.quartz.xml.XMLSchedulingDataProcessor] - Parsing XML file: job.xml with systemId: job.xml
+2021-05-30 12:15:41,038 [main] INFO  [org.quartz.xml.XMLSchedulingDataProcessor] - Adding 0 jobs, 0 triggers.
+2021-05-30 12:15:41,038 [main] INFO  [org.quartz.core.QuartzScheduler] - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2021-05-30 14:08:07,332 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2021-05-30 14:08:07,340 [main] INFO  [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-05-30 14:08:07,340 [main] INFO  [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.3.2 created.
+2021-05-30 14:08:07,341 [main] INFO  [org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin] - Registering Quartz Job Initialization Plug-in.
+2021-05-30 14:08:07,342 [main] INFO  [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2021-05-30 14:08:07,342 [main] INFO  [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 30 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-05-30 14:08:07,342 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'QuartzScheduler' initialized from the specified file : 'quartz.properties' from the class resource path.
+2021-05-30 14:08:07,342 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.3.2
+2021-05-30 14:08:07,353 [main] INFO  [org.quartz.xml.XMLSchedulingDataProcessor] - Parsing XML file: job.xml with systemId: job.xml
+2021-05-30 14:08:07,397 [main] INFO  [org.quartz.xml.XMLSchedulingDataProcessor] - Adding 0 jobs, 0 triggers.
+2021-05-30 14:08:07,397 [main] INFO  [org.quartz.core.QuartzScheduler] - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2021-05-30 14:08:07,617 [main] ERROR [com.player.game.GameServer] - 
+java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:552)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:336)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:134)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:562)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:506)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:491)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:260)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-30 14:08:54,591 [task-schedule-thread-1] ERROR [com.player.framework.task.MessageExecutor] - 
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at com.player.framework.task.MessageExecutor.action(MessageExecutor.java:50)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.transaction.TransactionException: Error configuring AutoCommit.  Your driver may not support getAutoCommit() or setAutoCommit(). Requested setting: false.  Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4,650,715 milliseconds ago. The last packet sent successfully to the server was 4,650,720 milliseconds ago.
+### The error may exist in com/player/game/mappers/UserMapper.xml
+### The error may involve com.player.game.mappers.UserMapper.getUserByUname
+### The error occurred while executing a query
+### Cause: org.apache.ibatis.transaction.TransactionException: Error configuring AutoCommit.  Your driver may not support getAutoCommit() or setAutoCommit(). Requested setting: false.  Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4,650,715 milliseconds ago. The last packet sent successfully to the server was 4,650,720 milliseconds ago.
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:153)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.getUserByUname(Unknown Source)
+	at com.player.game.servers.LoginServer.reqUserLogin(LoginServer.java:80)
+	at com.player.game.controllers.UserLoginController.reqUserLogin(UserLoginController.java:31)
+	... 7 more
+Caused by: org.apache.ibatis.transaction.TransactionException: Error configuring AutoCommit.  Your driver may not support getAutoCommit() or setAutoCommit(). Requested setting: false.  Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4,650,715 milliseconds ago. The last packet sent successfully to the server was 4,650,720 milliseconds ago.
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit(JdbcTransaction.java:108)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection(JdbcTransaction.java:143)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.getConnection(JdbcTransaction.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	... 16 more
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4,650,715 milliseconds ago. The last packet sent successfully to the server was 4,650,720 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2061)
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.ibatis.datasource.pooled.PooledConnection.invoke(PooledConnection.java:255)
+	at jdk.proxy3/jdk.proxy3.$Proxy20.setAutoCommit(Unknown Source)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit(JdbcTransaction.java:103)
+	... 26 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4,650,715 milliseconds ago. The last packet sent successfully to the server was 4,650,720 milliseconds ago.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:546)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:710)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:649)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:951)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:897)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
+	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2051)
+	... 32 more
+Caused by: javax.net.ssl.SSLException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:369)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:312)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:307)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1690)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1064)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:540)
+	... 38 more
+	Suppressed: java.net.SocketException: Connection reset by peer
+		at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:420)
+		at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+		at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:826)
+		at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1045)
+		at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:82)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:400)
+		... 51 more
+Caused by: java.net.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:325)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:976)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1444)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1048)
+	... 47 more
+2021-05-30 15:43:45,059 [main] ERROR [com.player.game.GameServer] - 
+java.lang.Exception: java.lang.RuntimeException: Controller[com.player.game.controllers.PlayerController] method[reqSelectPlayer] lack of RequestMapping annotation
+	at com.player.framework.net.MessageDispatcherFactory.initialize(MessageDispatcherFactory.java:59)
+	at com.player.game.GameServer.framework(GameServer.java:36)
+	at com.player.game.GameServer.start(GameServer.java:23)
+	at com.player.game.StartupServer.main(StartupServer.java:5)
+Caused by: java.lang.RuntimeException: Controller[com.player.game.controllers.PlayerController] method[reqSelectPlayer] lack of RequestMapping annotation
+	at com.player.framework.net.MessageDispatcherFactory.initialize(MessageDispatcherFactory.java:41)
+	... 3 more
+2021-05-30 15:44:20,511 [main] ERROR [com.player.game.GameServer] - 
+java.lang.Exception: java.lang.RuntimeException: Controller[com.player.game.controllers.PlayerController] method[reqSelectPlayer] lack of RequestMapping annotation
+	at com.player.framework.net.MessageDispatcherFactory.initialize(MessageDispatcherFactory.java:59)
+	at com.player.game.GameServer.framework(GameServer.java:36)
+	at com.player.game.GameServer.start(GameServer.java:23)
+	at com.player.game.StartupServer.main(StartupServer.java:5)
+Caused by: java.lang.RuntimeException: Controller[com.player.game.controllers.PlayerController] method[reqSelectPlayer] lack of RequestMapping annotation
+	at com.player.framework.net.MessageDispatcherFactory.initialize(MessageDispatcherFactory.java:41)
+	... 3 more
+2021-05-30 15:47:12,121 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2021-05-30 15:47:12,129 [main] INFO  [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-05-30 15:47:12,130 [main] INFO  [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.3.2 created.
+2021-05-30 15:47:12,130 [main] INFO  [org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin] - Registering Quartz Job Initialization Plug-in.
+2021-05-30 15:47:12,131 [main] INFO  [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2021-05-30 15:47:12,131 [main] INFO  [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 30 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-05-30 15:47:12,131 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'QuartzScheduler' initialized from the specified file : 'quartz.properties' from the class resource path.
+2021-05-30 15:47:12,131 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.3.2
+2021-05-30 15:47:12,142 [main] INFO  [org.quartz.xml.XMLSchedulingDataProcessor] - Parsing XML file: job.xml with systemId: job.xml
+2021-05-30 15:47:12,187 [main] INFO  [org.quartz.xml.XMLSchedulingDataProcessor] - Adding 0 jobs, 0 triggers.
+2021-05-30 15:47:12,187 [main] INFO  [org.quartz.core.QuartzScheduler] - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2021-05-30 15:47:53,909 [task-schedule-thread-1] ERROR [com.player.framework.task.MessageExecutor] - 
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at com.player.framework.task.MessageExecutor.action(MessageExecutor.java:50)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in com/player/game/mappers/UserMapper.xml
+### The error may involve com.player.game.mappers.UserMapper.getUserByUname
+### The error occurred while executing a query
+### Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:153)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.getUserByUname(Unknown Source)
+	at com.player.game.servers.LoginServer.reqUserLogin(LoginServer.java:80)
+	at com.player.game.controllers.LoginController.reqUserLogin(LoginController.java:21)
+	... 7 more
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:453)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.doGetConnection(UnpooledDataSource.java:224)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.doGetConnection(UnpooledDataSource.java:219)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.getConnection(UnpooledDataSource.java:95)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:432)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.getConnection(PooledDataSource.java:89)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection(JdbcTransaction.java:139)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.getConnection(JdbcTransaction.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	... 16 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:953)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:823)
+	... 36 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:576)
+	at java.base/sun.nio.ch.Net.connect(Net.java:565)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:645)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 39 more
+2021-05-30 15:48:14,955 [task-schedule-thread-1] ERROR [com.player.framework.task.MessageExecutor] - 
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at com.player.framework.task.MessageExecutor.action(MessageExecutor.java:50)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in com/player/game/mappers/UserMapper.xml
+### The error may involve com.player.game.mappers.UserMapper.getUserByUname
+### The error occurred while executing a query
+### Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:153)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.getUserByUname(Unknown Source)
+	at com.player.game.servers.LoginServer.reqUserLogin(LoginServer.java:80)
+	at com.player.game.controllers.LoginController.reqUserLogin(LoginController.java:21)
+	... 7 more
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:453)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.doGetConnection(UnpooledDataSource.java:224)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.doGetConnection(UnpooledDataSource.java:219)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.getConnection(UnpooledDataSource.java:95)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:432)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.getConnection(PooledDataSource.java:89)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection(JdbcTransaction.java:139)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.getConnection(JdbcTransaction.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	... 16 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:953)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:823)
+	... 36 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:576)
+	at java.base/sun.nio.ch.Net.connect(Net.java:565)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:645)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 39 more
+2021-05-31 01:47:14,121 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Using default implementation for ThreadExecutor
+2021-05-31 01:47:14,130 [main] INFO  [org.quartz.core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-05-31 01:47:14,130 [main] INFO  [org.quartz.core.QuartzScheduler] - Quartz Scheduler v.2.3.2 created.
+2021-05-31 01:47:14,130 [main] INFO  [org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin] - Registering Quartz Job Initialization Plug-in.
+2021-05-31 01:47:14,131 [main] INFO  [org.quartz.simpl.RAMJobStore] - RAMJobStore initialized.
+2021-05-31 01:47:14,132 [main] INFO  [org.quartz.core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 30 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-05-31 01:47:14,132 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler 'QuartzScheduler' initialized from the specified file : 'quartz.properties' from the class resource path.
+2021-05-31 01:47:14,132 [main] INFO  [org.quartz.impl.StdSchedulerFactory] - Quartz scheduler version: 2.3.2
+2021-05-31 01:47:14,138 [main] INFO  [org.quartz.xml.XMLSchedulingDataProcessor] - Parsing XML file: job.xml with systemId: job.xml
+2021-05-31 01:47:14,181 [main] INFO  [org.quartz.xml.XMLSchedulingDataProcessor] - Adding 0 jobs, 0 triggers.
+2021-05-31 01:47:14,181 [main] INFO  [org.quartz.core.QuartzScheduler] - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2021-05-31 01:47:52,768 [task-schedule-thread-1] ERROR [com.player.framework.task.MessageExecutor] - 
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at com.player.framework.task.MessageExecutor.action(MessageExecutor.java:50)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in com/player/game/mappers/UserMapper.xml
+### The error may involve com.player.game.mappers.UserMapper.getUserbyGuestKey
+### The error occurred while executing a query
+### Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:153)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.getUserbyGuestKey(Unknown Source)
+	at com.player.game.servers.LoginServer.reqGuestLogin(LoginServer.java:40)
+	at com.player.game.controllers.LoginController.reqGuestLogin(LoginController.java:15)
+	... 7 more
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:453)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.doGetConnection(UnpooledDataSource.java:224)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.doGetConnection(UnpooledDataSource.java:219)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.getConnection(UnpooledDataSource.java:95)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:432)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.getConnection(PooledDataSource.java:89)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection(JdbcTransaction.java:139)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.getConnection(JdbcTransaction.java:61)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	... 16 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:953)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:823)
+	... 36 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:576)
+	at java.base/sun.nio.ch.Net.connect(Net.java:565)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:333)
+	at java.base/java.net.Socket.connect(Socket.java:645)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 39 more
+2021-05-31 01:48:08,041 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:08,057 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:08,075 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:08,095 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:22,017 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:23,596 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:30,321 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:30,732 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:31,038 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:31,300 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:31,628 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:31,918 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:32,076 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:32,141 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:32,401 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:36,407 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:36,774 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:36,898 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:37,163 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:37,364 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:37,550 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:37,752 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:37,937 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:38,142 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:38,329 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:38,514 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:38,707 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:38,889 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:39,077 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:39,899 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:40,101 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:40,333 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2021-05-31 01:48:40,572 [task-schedule-thread-1] ERROR [com.player.framework.task.OrmExecutor] - 
+java.lang.NoSuchMethodException: com.player.game.mappers.UserMapper.add(java.lang.Object)
+	at java.base/java.lang.Class.getMethod(Class.java:2195)
+	at com.player.framework.task.OrmExecutor.action(OrmExecutor.java:41)
+	at com.player.framework.task.TaskScheduleFactory$TaskWorker.run(TaskScheduleFactory.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:831)

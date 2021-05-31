@@ -1,18 +1,17 @@
-package com.player.framework.serializer.annotation;
+package com.player.framework.annotation.message;
+
+import static java.lang.annotation.ElementType.TYPE;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Documented
-@Target(ElementType.TYPE)
-@Retention(RetentionPolicy.RUNTIME)
+@Retention(RUNTIME)
+@Target(TYPE)
 public @interface MessageMeta {
-
 	short module() default 0;
 
 	short cmd() default 0;
-
 }

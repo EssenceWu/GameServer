@@ -22,26 +22,27 @@ public class GameServer {
 		stopWatch.start();
 		framework();
 		stopWatch.stop();
+		System.out.println("Loading all server[" + stopWatch.getTime() + "] successfully!");
 	}
 
 	private static void framework() {
 		try {
-			// 加载配置
+			// 加载服务配置
 			ServerConfig serverConfig = XmlWrapper.load(ServerPath.SERVER_PATH, ServerConfig.class);
-			// 版本工厂
+			// 服务版本工厂
 			ServerVersion.INSTANCE.initialize(ServerPath.VERSION_PATH);
-			// 协议工厂
+			// 消息协议工厂
 			MessageFactory.INSTANCE.initialize(ServerPath.MESSAGE_PATH);
-			// 事件工厂
+			// 消息执行器工厂
 			MessageDispatcherFactory.INSTANCE.initialize(ServerPath.CONTROLLER_PATH);
 			// 数据库工厂
-			OrmFactory.INSTANCE.initialize(ServerPath.ORM_PATH);
+			OrmFactory.INSTANCE.initialize(ServerPath.ORM_PATH, ServerPath.DATABASE_PATH);
 			// 缓存库工厂
 			RedisFactory.INSTANCE.initialize(serverConfig.getRedisUrl());
 			// 任务调度工厂
 			TaskScheduleFactory.INSTANCE.initialize();
 			// 定时调度工厂
-			QuartzFactory.INSTANCE.initialize(ServerPath.QUARTZ_PATH);
+			// QuartzFactory.INSTANCE.initialize(ServerPath.QUARTZ_PATH);
 			// 通信调度工厂
 			NettyFactory.INSTANCE.initialize(serverConfig.getServerPort());
 

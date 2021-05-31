@@ -8,13 +8,12 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.player.framework.annotation.message.Controller;
+import com.player.framework.annotation.message.RequestMapping;
 import com.player.framework.serializer.Message;
 import com.player.framework.serializer.MessageFactory;
-import com.player.framework.serializer.annotation.Controller;
-import com.player.framework.serializer.annotation.RequestMapping;
 import com.player.framework.task.CmdExecutor;
-import com.player.framework.task.Distribute;
-import com.player.framework.task.MessageExecutor;
+import com.player.framework.task.MessageTask;
 import com.player.framework.task.TaskScheduleFactory;
 import com.player.framework.util.ClassScanner;
 
@@ -29,7 +28,7 @@ public enum MessageDispatcherFactory implements IoDispatcher {
 	public void initialize(String packageName) throws Exception {
 		try {
 			System.out.println("Loading message executor...");
-			Set<Class<?>> result = ClassScanner.getAnnotation(packageName, Controller.class);
+			Set<Class<?>> result = ClassScanner.getDeclaredAnnotationClass(packageName, Controller.class);
 			for (Class<?> controller : result) {
 				Object handler = controller.getDeclaredConstructor().newInstance();
 				Method[] methods = controller.getDeclaredMethods();
@@ -61,13 +60,13 @@ public enum MessageDispatcherFactory implements IoDispatcher {
 	}
 
 	public void onSessionCreated(IdSession session) {
-		session.setAttribute(Distribute.DISTRIBUTE_KEY, Distribute.distributeKey());
+		session.setAttribute(PropertySession.UUID, PropertySession.uuid());
 	}
 
 	public void dispatch(IdSession session, Message message) {
 		short module = message.getModule();
 		short cmd = message.getCmd();
-		int distributeKey = (int) session.getAttribute(Distribute.DISTRIBUTE_KEY);
+		int distributeKey = (int) session.getAttribute(PropertySession.UUID);
 		CmdExecutor executer = this.Storage.get(MessageFactory.INSTANCE.key(module, cmd));
 		if (executer == null) {
 			logger.error("Message executor missed, module={},cmd={}", module, cmd);
@@ -76,7 +75,7 @@ public enum MessageDispatcherFactory implements IoDispatcher {
 		Object controller = executer.getHandler();
 		Object[] params = this.getParams(session, message, executer.getParams());
 		TaskScheduleFactory.INSTANCE
-				.addTask(MessageExecutor.valueOf(controller, executer.getMethod(), params, distributeKey));
+				.addTask(MessageTask.valueOf(distributeKey, controller, executer.getMethod(), params));
 	}
 
 	public void onSessionClosed(IdSession session) {

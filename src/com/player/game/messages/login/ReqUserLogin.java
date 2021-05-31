@@ -1,8 +1,8 @@
 package com.player.game.messages.login;
 
 import com.baidu.bjf.remoting.protobuf.annotation.Protobuf;
+import com.player.framework.annotation.message.MessageMeta;
 import com.player.framework.serializer.Message;
-import com.player.framework.serializer.annotation.MessageMeta;
 import com.player.game.Module;
 import com.player.game.Cmd;
 

@@ -26,13 +26,12 @@ public enum NettyFactory {
 			ServerBootstrap b = new ServerBootstrap();
 			b.group(bossGroup, workerGroup).channel(NioServerSocketChannel.class).option(ChannelOption.SO_BACKLOG, 1024)
 					.childHandler(new NettyHandler());
-			ChannelFuture f = b.bind(new InetSocketAddress(port)).sync();
+			b.bind(new InetSocketAddress(port)).sync();
 			System.out.println("Loading netty service successfully!");
-			System.out.println("Loading all service successfully!");
-			f.channel().closeFuture().sync();
-		} finally {
+		} catch (Exception e) {
 			bossGroup.shutdownGracefully();
 			workerGroup.shutdownGracefully();
+			throw e;
 		}
 	}
 

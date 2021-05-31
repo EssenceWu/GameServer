@@ -1,6 +1,6 @@
 package com.player.framework.serializer;
 
-import com.player.framework.serializer.annotation.MessageMeta;
+import com.player.framework.annotation.message.MessageMeta;
 
 public class Message {
 

@@ -8,7 +8,7 @@ public enum PlayerSessionManager {
 	INSTANCE;
 
 	private ConcurrentMap<Long, IdSession> Storage = new ConcurrentHashMap<>();
-	
+
 	public long getPlayerId(IdSession session) {
 		if (session != null) {
 			return session.getPlayerId();
@@ -21,7 +21,7 @@ public enum PlayerSessionManager {
 	}
 
 	public void setPlayerSession(long playerId, IdSession session) {
-		session.setAttribute(SessionProperty.PLAYER_ID, playerId);
+		session.setAttribute(PropertySession.PLAYER_ID, playerId);
 		this.Storage.put(playerId, session);
 	}
 

@@ -18,8 +18,8 @@ public class PlayerSession implements IdSession {
 	}
 
 	public long getPlayerId() {
-		if (Storage.containsKey(SessionProperty.PLAYER_ID)) {
-			return (long) Storage.get(SessionProperty.PLAYER_ID);
+		if (Storage.containsKey(PropertySession.PLAYER_ID)) {
+			return (long) Storage.get(PropertySession.PLAYER_ID);
 		}
 		return 0;
 	}

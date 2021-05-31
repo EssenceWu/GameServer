@@ -4,8 +4,9 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.player.framework.net.IdSession;
 import com.player.framework.net.MessageRouter;
-import com.player.framework.net.SessionProperty;
+import com.player.framework.net.PropertySession;
 import com.player.framework.orm.OrmFactory;
+import com.player.framework.orm.OrmNotifyFactory;
 import com.player.framework.util.ToolUtil;
 import com.player.game.Config;
 import com.player.game.Resonpose;
@@ -34,27 +35,28 @@ public class LoginServer {
 			MessageRouter.send(session, resGuestLogin);
 			return;
 		}
-		SqlSession sqlSession = OrmFactory.INSTANCE.getSqlSession();
+		SqlSession sqlSession = OrmFactory.INSTANCE.getSqlSession("user");
 		UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
 		UserModel user = userMapper.getUserbyGuestKey(request.guestKey);
 		sqlSession.commit();
 		sqlSession.close();
 		if (user == null) {
 			user = new UserModel();
+			user.setId(8848);
 			user.setUname("сн©м" + ToolUtil.getRandom(1000, 9999));
 			user.setUnick(Config.name[ToolUtil.getRandom(0, 9)]);
 			user.setGuestKey(request.guestKey);
 			user.setIsGuest(1);
 			user.setStatus(1);
-			userMapper.addUser(user);
-			session.setAttribute(SessionProperty.UID, user.getId());
+			OrmNotifyFactory.add(1, "user", UserMapper.class, "add", user);
+			session.setAttribute(PropertySession.UID, user.getId());
 			uinfo.unick = user.getUnick();
 			resGuestLogin.uinfo = uinfo;
-		}else {
+		} else {
 			if (user.getStatus() == 0) {
 				resGuestLogin.status = Resonpose.UserIsFreeze;
 				resGuestLogin.uinfo = null;
-			}else if (user.getIsGuest() != 1) {
+			} else if (user.getIsGuest() != 1) {
 				resGuestLogin.status = Resonpose.UserIsNotGuest;
 				resGuestLogin.uinfo = null;
 			} else {
@@ -63,9 +65,10 @@ public class LoginServer {
 				resGuestLogin.uinfo = uinfo;
 			}
 		}
+		session.setAttribute(PropertySession.UID, user.getId());
 		MessageRouter.send(session, resGuestLogin);
 	}
-	
+
 	public void reqUserLogin(IdSession session, ReqUserLogin request) {
 		ResUserLogin resUserLogin = new ResUserLogin();
 		AccountInfo uinfo = new AccountInfo();
@@ -82,18 +85,18 @@ public class LoginServer {
 		if (user == null || !request.upwd.equals(user.getUpwd())) {
 			resUserLogin.status = Resonpose.UnameOrUpwdError;
 			resUserLogin.uinfo = null;
-		}else {
+		} else {
 			if (user.getStatus() == 0) {
 				resUserLogin.status = Resonpose.UserIsFreeze;
 				resUserLogin.uinfo = null;
-			}else if (user.getIsGuest() == 1) {
+			} else if (user.getIsGuest() == 1) {
 				resUserLogin.status = Resonpose.UserIsNotGuest;
 				resUserLogin.uinfo = null;
-			}else {
+			} else {
 				resUserLogin.status = Resonpose.OK;
 				uinfo.unick = user.getUnick();
 				resUserLogin.uinfo = uinfo;
-				session.setAttribute(SessionProperty.UID, user.getId());
+				session.setAttribute(PropertySession.UID, user.getId());
 			}
 		}
 		MessageRouter.send(session, resUserLogin);

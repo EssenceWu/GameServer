@@ -12,4 +12,8 @@ public interface Cmd {
 	int ReqUserLogin = 3;
 	int ResUserLogin = 4;
 
+	// —°‘Ò÷∞“µ
+	int ReqSelectPlayer = 5;
+	int ResSelectPlayer = 6;
+
 }

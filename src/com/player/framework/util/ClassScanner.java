@@ -18,18 +18,24 @@ public class ClassScanner {
 
 	private static Predicate<Class<?>> EMPTY_FILTER = clazz -> true;
 
-	public static Set<Class<?>> getClass(String packageName) throws Exception {
+	public static Set<Class<?>> getDeclaredClass(String packageName) throws Exception {
 		return getClass(packageName, EMPTY_FILTER);
 	}
 
-	public static Set<Class<?>> getSubClass(String packageName, Class<?> parent) throws Exception {
+	public static Set<Class<?>> getDeclaredSubClass(String packageName, Class<?> parent) throws Exception {
 		return getClass(packageName, (clazz) -> {
 			return parent.isAssignableFrom(clazz) && !Modifier.isAbstract(clazz.getModifiers());
 		});
 	}
 
-	public static <A extends Annotation> Set<Class<?>> getAnnotation(String packageName, Class<A> annotation)
-			throws Exception {
+	public static <A extends Annotation> Set<Class<?>> getDeclaredAnnotations(String packageName) throws Exception {
+		return getClass(packageName, (clazz) -> {
+			return clazz.isAnnotation();
+		});
+	}
+
+	public static <A extends Annotation> Set<Class<?>> getDeclaredAnnotationClass(String packageName,
+			Class<A> annotation) throws Exception {
 		return getClass(packageName, (clazz) -> {
 			return clazz.getAnnotation(annotation) != null;
 		});
@@ -51,27 +57,28 @@ public class ClassScanner {
 
 	private static void getDirectoryClass(String packageName, Predicate<Class<?>> filter, String dirPath,
 			Set<Class<?>> result) throws Exception {
-		File dir = new File(dirPath);
-		File[] list = dir.listFiles(new FileFilter() {
-			public boolean accept(File file) {
-				return file.isDirectory() || file.getName().endsWith(".class") && !file.getName().contains("$");
-			}
-		});
-		for (File file : list) {
-			String name = file.getName();
-			if (file.isDirectory()) {
-				getDirectoryClass(packageName + "." + name, filter, file.getAbsolutePath(), result);
-			} else {
-				try {
+		try {
+			File dir = new File(dirPath);
+			File[] list = dir.listFiles(new FileFilter() {
+				public boolean accept(File file) {
+					return file.isDirectory() || file.getName().endsWith(".class") && !file.getName().contains("$");
+				}
+			});
+			for (File file : list) {
+				String name = file.getName();
+				if (file.isDirectory()) {
+					getDirectoryClass(packageName + "." + name, filter, file.getAbsolutePath(), result);
+				} else {
 					String className = packageName + '.' + name.substring(0, name.length() - 6);
 					Class<?> clazz = Thread.currentThread().getContextClassLoader().loadClass(className);
 					if (filter.test(clazz)) {
 						result.add(clazz);
 					}
-				} catch (ClassNotFoundException e) {
-					throw new ClassNotFoundException();
+
 				}
 			}
+		} catch (ClassNotFoundException e) {
+			throw new Exception();
 		}
 	}
 
@@ -81,21 +88,16 @@ public class ClassScanner {
 			JarFile jar = ((JarURLConnection) url.openConnection()).getJarFile();
 			Enumeration<JarEntry> entries = jar.entries();
 			while (entries.hasMoreElements()) {
-				try {
-					String name = entries.nextElement().getName();
-					if (name.startsWith(packageName.replace('.', '/')) && name.endsWith(".class")
-							&& !name.contains("$")) {
-						String className = name.substring(0, name.length() - 6).replace('/', '.');
-						Class<?> clazz = Thread.currentThread().getContextClassLoader().loadClass(className);
-						if (filter.test(clazz)) {
-							result.add(clazz);
-						}
+				String name = entries.nextElement().getName();
+				if (name.startsWith(packageName.replace('.', '/')) && name.endsWith(".class") && !name.contains("$")) {
+					String className = name.substring(0, name.length() - 6).replace('/', '.');
+					Class<?> clazz = Thread.currentThread().getContextClassLoader().loadClass(className);
+					if (filter.test(clazz)) {
+						result.add(clazz);
 					}
-				} catch (ClassNotFoundException e) {
-					throw new ClassNotFoundException();
 				}
 			}
-		} catch (IOException e) {
+		} catch (Exception e) {
 			throw new IOException();
 		}
 		return result;

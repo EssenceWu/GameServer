@@ -8,7 +8,7 @@ import io.netty.util.AttributeKey;
 
 public class ChannelSession {
 
-	private static AttributeKey<IdSession> KEY = AttributeKey.valueOf(SessionProperty.SESSION_ID);
+	private static AttributeKey<IdSession> KEY = AttributeKey.valueOf(PropertySession.SESSION_ID);
 
 	public static IdSession getPlayerSession(Channel channel) {
 		Attribute<IdSession> sessionAttr = channel.attr(KEY);

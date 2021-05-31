@@ -10,7 +10,7 @@
 		resultType="com.player.game.models.UserModel">
 		select * from `user` where uname = #{uname}
 	</select>
-	<insert id="addUser"
+	<insert id="add"
 		parameterType="com.player.game.models.UserModel"
 		useGeneratedKeys="true" keyProperty="id">
 		insert
