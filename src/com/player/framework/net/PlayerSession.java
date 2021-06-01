@@ -10,7 +10,7 @@ import io.netty.channel.Channel;
 public class PlayerSession implements IdSession {
 
 	private Channel channel;
-	private Map<String, Object> docker = new HashMap<>();
+	private Map<String, Object> container = new HashMap<>();
 
 	public PlayerSession(Channel channel) {
 		super();
@@ -18,18 +18,18 @@ public class PlayerSession implements IdSession {
 	}
 
 	public long getPlayerId() {
-		if (this.docker.containsKey(PropertySession.PLAYER_ID)) {
-			return long.class.cast(this.docker.get(PropertySession.PLAYER_ID));
+		if (this.container.containsKey(PropertySession.PLAYER_ID)) {
+			return (long) this.container.get(PropertySession.PLAYER_ID);
 		}
 		return 0;
 	}
 
 	public Object getAttribute(String key) {
-		return this.docker.get(key);
+		return this.container.get(key);
 	}
 
 	public void setAttribute(String key, Object value) {
-		this.docker.put(key, value);
+		this.container.put(key, value);
 	}
 
 	public void send(Message message) {

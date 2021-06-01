@@ -21,7 +21,7 @@ public enum MessageDispatcherFactory implements IoDispatcher {
 
 	INSTANCE;
 
-	private Map<Integer, CmdExecutor> docker = new HashMap<>();
+	private Map<Integer, CmdExecutor> container = new HashMap<>();
 
 	private static Logger logger = LoggerFactory.getLogger(MessageDispatcherFactory.class);
 
@@ -44,12 +44,12 @@ public enum MessageDispatcherFactory implements IoDispatcher {
 						short module = meta[0];
 						short cmd = meta[1];
 						int key = MessageFactory.INSTANCE.key(module, cmd);
-						CmdExecutor executer = this.docker.get(key);
+						CmdExecutor executer = this.container.get(key);
 						if (executer != null) {
 							throw new RuntimeException(String.format("Module[%d] cmd[%d] duplicated", module, cmd));
 						}
 						executer = CmdExecutor.valueOf(handler, method, method.getParameterTypes());
-						this.docker.put(key, executer);
+						this.container.put(key, executer);
 					}
 				}
 			}
@@ -72,7 +72,7 @@ public enum MessageDispatcherFactory implements IoDispatcher {
 			short module = message.getModule();
 			short cmd = message.getCmd();
 			int uuid = (int) session.getAttribute(PropertySession.UUID);
-			CmdExecutor executer = this.docker.get(MessageFactory.INSTANCE.key(module, cmd));
+			CmdExecutor executer = this.container.get(MessageFactory.INSTANCE.key(module, cmd));
 			if (executer == null) {
 				throw new Exception("Message executor missed, module=" + module + ",cmd=" + cmd);
 			}

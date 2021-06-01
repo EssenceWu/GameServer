@@ -7,7 +7,7 @@ public enum PlayerSessionManager {
 
 	INSTANCE;
 
-	private ConcurrentMap<Long, IdSession> docker = new ConcurrentHashMap<>();
+	private ConcurrentMap<Long, IdSession> container = new ConcurrentHashMap<>();
 
 	public long getPlayerId(IdSession session) {
 		if (session != null) {
@@ -17,12 +17,12 @@ public enum PlayerSessionManager {
 	}
 
 	public IdSession getPlayerSession(long playerId) {
-		return this.docker.get(playerId);
+		return this.container.get(playerId);
 	}
 
 	public void setPlayerSession(long playerId, IdSession session) {
 		session.setAttribute(PropertySession.PLAYER_ID, playerId);
-		this.docker.put(playerId, session);
+		this.container.put(playerId, session);
 	}
 
 }

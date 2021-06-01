@@ -3,12 +3,12 @@ package com.player.game.servers;
 import com.player.framework.net.IdSession;
 import com.player.framework.net.MessageRouter;
 import com.player.framework.net.PropertySession;
-import com.player.framework.orm.Mapper;
 import com.player.framework.orm.OrmAsyncFactory;
-import com.player.framework.orm.OrmFactory;
 import com.player.framework.util.ToolUtil;
 import com.player.game.Config;
 import com.player.game.Resonpose;
+import com.player.game.cache.GuestKeyCache;
+import com.player.game.cache.UnameCache;
 import com.player.game.mappers.UserMapper;
 import com.player.game.messages.login.AccountInfo;
 import com.player.game.messages.login.ReqGuestLogin;
@@ -34,10 +34,7 @@ public class LoginServer {
 			MessageRouter.send(session, resGuestLogin);
 			return;
 		}
-		Mapper mapper = OrmFactory.INSTANCE.getMapper(UserMapper.class);
-		UserMapper userMapper = UserMapper.class.cast(mapper.getObject());
-		UserModel user = userMapper.getUserbyGuestKey(request.guestKey);
-		mapper.close();
+		UserModel user = GuestKeyCache.get(request.guestKey);
 		if (user == null) {
 			user = new UserModel();
 			user.setId(ToolUtil.getId());
@@ -77,10 +74,7 @@ public class LoginServer {
 			MessageRouter.send(session, resUserLogin);
 			return;
 		}
-		Mapper mapper = OrmFactory.INSTANCE.getMapper(UserMapper.class);
-		UserMapper userMapper = UserMapper.class.cast(mapper.getObject());
-		UserModel user = userMapper.getUserByUname(request.uname);
-		mapper.close();
+		UserModel user = UnameCache.get(request.uname);
 		if (user == null || !request.upwd.equals(user.getUpwd())) {
 			resUserLogin.status = Resonpose.UnameOrUpwdError;
 			resUserLogin.uinfo = null;
