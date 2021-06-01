@@ -10,11 +10,11 @@ public class GuestKeyCache extends CacheAdapter<String, UserModel> {
 
 	public static GuestKeyCache userGuestKeyCache = new GuestKeyCache();
 
-	public static UserModel get(String guestKey) {
-		return userGuestKeyCache.getCache(guestKey);
+	public static UserModel getUserbyGuestKey(String guestKey) {
+		return userGuestKeyCache.get(guestKey);
 	}
 
-	public UserModel loadCache(String guestKey) {
+	public UserModel select(String guestKey) {
 		Mapper mapper = OrmFactory.INSTANCE.getMapper(UserMapper.class);
 		UserMapper userMapper = UserMapper.class.cast(mapper.getObject());
 		UserModel userModel = userMapper.getUserbyGuestKey(guestKey);

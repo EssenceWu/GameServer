@@ -34,7 +34,7 @@ public class LoginServer {
 			MessageRouter.send(session, resGuestLogin);
 			return;
 		}
-		UserModel user = GuestKeyCache.get(request.guestKey);
+		UserModel user = GuestKeyCache.getUserbyGuestKey(request.guestKey);
 		if (user == null) {
 			user = new UserModel();
 			user.setId(ToolUtil.getId());
@@ -74,7 +74,7 @@ public class LoginServer {
 			MessageRouter.send(session, resUserLogin);
 			return;
 		}
-		UserModel user = UnameCache.get(request.uname);
+		UserModel user = UnameCache.getUserByUname(request.uname);
 		if (user == null || !request.upwd.equals(user.getUpwd())) {
 			resUserLogin.status = Resonpose.UnameOrUpwdError;
 			resUserLogin.uinfo = null;

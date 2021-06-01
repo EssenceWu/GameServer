@@ -17,7 +17,7 @@ public abstract class CacheAdapter<K, V> {
 				.expireAfterWrite(CacheOption.expireAfterWriteSeconds, TimeUnit.SECONDS).build(new Loader());
 	}
 
-	public V getCache(K k) {
+	public V get(K k) {
 		try {
 			return this.cache.get(k);
 		} catch (Exception e) {
@@ -27,10 +27,10 @@ public abstract class CacheAdapter<K, V> {
 
 	private class Loader extends CacheLoader<K, V> {
 		public V load(K key) throws Exception {
-			return loadCache(key);
+			return select(key);
 		}
 	}
 
-	public abstract V loadCache(K k);
+	public abstract V select(K k);
 
 }

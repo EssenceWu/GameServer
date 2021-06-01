@@ -10,11 +10,11 @@ public class UnameCache extends CacheAdapter<String, UserModel> {
 
 	public static UnameCache unameCache = new UnameCache();
 
-	public static UserModel get(String uname) {
-		return unameCache.getCache(uname);
+	public static UserModel getUserByUname(String uname) {
+		return unameCache.get(uname);
 	}
 
-	public UserModel loadCache(String uname) {
+	public UserModel select(String uname) {
 		Mapper mapper = OrmFactory.INSTANCE.getMapper(UserMapper.class);
 		UserMapper userMapper = UserMapper.class.cast(mapper.getObject());
 		UserModel userModel = userMapper.getUserByUname(uname);
