@@ -60,25 +60,36 @@ public enum MessageDispatcherFactory implements IoDispatcher {
 	}
 
 	public void onSessionCreated(IdSession session) {
-		session.setAttribute(PropertySession.UUID, PropertySession.uuid());
+		try {
+			session.setAttribute(PropertySession.UUID, PropertySession.uuid());
+		} catch (Exception e) {
+			logger.error("", e);
+		}
 	}
 
 	public void dispatch(IdSession session, Message message) {
-		short module = message.getModule();
-		short cmd = message.getCmd();
-		int uuid = int.class.cast(session.getAttribute(PropertySession.UUID));
-		CmdExecutor executer = this.docker.get(MessageFactory.INSTANCE.key(module, cmd));
-		if (executer == null) {
-			logger.error("Message executor missed, module={},cmd={}", module, cmd);
-			return;
+		try {
+			short module = message.getModule();
+			short cmd = message.getCmd();
+			int uuid = (int) session.getAttribute(PropertySession.UUID);
+			CmdExecutor executer = this.docker.get(MessageFactory.INSTANCE.key(module, cmd));
+			if (executer == null) {
+				throw new Exception("Message executor missed, module=" + module + ",cmd=" + cmd);
+			}
+			Object controller = executer.getHandler();
+			Object[] params = this.getParams(session, message, executer.getParams());
+			TaskScheduleFactory.INSTANCE.addTask(MessageTask.valueOf(uuid, controller, executer.getMethod(), params));
+		} catch (Exception e) {
+			logger.error("", e);
 		}
-		Object controller = executer.getHandler();
-		Object[] params = this.getParams(session, message, executer.getParams());
-		TaskScheduleFactory.INSTANCE.addTask(MessageTask.valueOf(uuid, controller, executer.getMethod(), params));
 	}
 
 	public void onSessionClosed(IdSession session) {
-		PlayerSessionManager.INSTANCE.getPlayerId(session);
+		try {
+			PlayerSessionManager.INSTANCE.getPlayerId(session);
+		} catch (Exception e) {
+			logger.error("", e);
+		}
 	}
 
 	private Object[] getParams(IdSession session, Message message, Class<?>[] params) {

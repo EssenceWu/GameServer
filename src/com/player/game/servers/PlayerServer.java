@@ -23,37 +23,37 @@ public class PlayerServer {
 	}
 
 	public void reqSelectPlayer(IdSession session, ReqSelectPlayer request) {
-		ResSelectPlayer res = new ResSelectPlayer();
-		Object obj = session.getAttribute(PropertySession.UID);
-		if (obj == null) {
-			res.status = Resonpose.InvalidOpt;
-			MessageRouter.send(session, res);
-			return;
-		}
-		PlayerModel player;
-		long uid = (long) obj;
-		long playerId = session.getPlayerId();
-		SqlSession sqlSession = OrmFactory.INSTANCE.getSqlSession();
-		PlayerMapper playerMapper = sqlSession.getMapper(PlayerMapper.class);
-		if (playerId == 0) {
-			player = playerMapper.getPlayerByUid(uid);
-			if (player == null) {
-				player = new PlayerModel();
-				player.setUid(uid);
-				player.setName(request.name);
-				player.setJob(request.job);
-				player.setPlatform(request.platform);
-				playerMapper.add(player);
-			}
-		} else {
-			player = playerMapper.getPlayerById(playerId);
-		}
-		sqlSession.commit();
-		sqlSession.close();
-		PlayerSessionManager.INSTANCE.setPlayerSession(playerId, session);
-		res.status = Resonpose.OK;
-		res.playerInfo = new PlayerInfoComponent();
-		MessageRouter.send(session, res);
+//		ResSelectPlayer res = new ResSelectPlayer();
+//		Object obj = session.getAttribute(PropertySession.UID);
+//		if (obj == null) {
+//			res.status = Resonpose.InvalidOpt;
+//			MessageRouter.send(session, res);
+//			return;
+//		}
+//		PlayerModel player;
+//		long uid = (long) obj;
+//		long playerId = session.getPlayerId();
+//		SqlSession sqlSession = OrmFactory.INSTANCE.getSqlSession();
+//		PlayerMapper playerMapper = sqlSession.getMapper(PlayerMapper.class);
+//		if (playerId == 0) {
+//			player = playerMapper.getPlayerByUid(uid);
+//			if (player == null) {
+//				player = new PlayerModel();
+//				player.setUid(uid);
+//				player.setName(request.name);
+//				player.setJob(request.job);
+//				player.setPlatform(request.platform);
+//				playerMapper.add(player);
+//			}
+//		} else {
+//			player = playerMapper.getPlayerById(playerId);
+//		}
+//		sqlSession.commit();
+//		sqlSession.close();
+//		PlayerSessionManager.INSTANCE.setPlayerSession(playerId, session);
+//		res.status = Resonpose.OK;
+//		res.playerInfo = new PlayerInfoComponent();
+//		MessageRouter.send(session, res);
 	}
 
 }
