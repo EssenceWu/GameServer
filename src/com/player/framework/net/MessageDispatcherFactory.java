@@ -21,7 +21,7 @@ public enum MessageDispatcherFactory implements IoDispatcher {
 
 	INSTANCE;
 
-	private Map<Integer, CmdExecutor> Storage = new HashMap<>();
+	private Map<Integer, CmdExecutor> docker = new HashMap<>();
 
 	private static Logger logger = LoggerFactory.getLogger(MessageDispatcherFactory.class);
 
@@ -44,12 +44,12 @@ public enum MessageDispatcherFactory implements IoDispatcher {
 						short module = meta[0];
 						short cmd = meta[1];
 						int key = MessageFactory.INSTANCE.key(module, cmd);
-						CmdExecutor executer = this.Storage.get(key);
+						CmdExecutor executer = this.docker.get(key);
 						if (executer != null) {
 							throw new RuntimeException(String.format("Module[%d] cmd[%d] duplicated", module, cmd));
 						}
 						executer = CmdExecutor.valueOf(handler, method, method.getParameterTypes());
-						this.Storage.put(key, executer);
+						this.docker.put(key, executer);
 					}
 				}
 			}
@@ -66,16 +66,15 @@ public enum MessageDispatcherFactory implements IoDispatcher {
 	public void dispatch(IdSession session, Message message) {
 		short module = message.getModule();
 		short cmd = message.getCmd();
-		int distributeKey = (int) session.getAttribute(PropertySession.UUID);
-		CmdExecutor executer = this.Storage.get(MessageFactory.INSTANCE.key(module, cmd));
+		int uuid = int.class.cast(session.getAttribute(PropertySession.UUID));
+		CmdExecutor executer = this.docker.get(MessageFactory.INSTANCE.key(module, cmd));
 		if (executer == null) {
 			logger.error("Message executor missed, module={},cmd={}", module, cmd);
 			return;
 		}
 		Object controller = executer.getHandler();
 		Object[] params = this.getParams(session, message, executer.getParams());
-		TaskScheduleFactory.INSTANCE
-				.addTask(MessageTask.valueOf(distributeKey, controller, executer.getMethod(), params));
+		TaskScheduleFactory.INSTANCE.addTask(MessageTask.valueOf(uuid, controller, executer.getMethod(), params));
 	}
 
 	public void onSessionClosed(IdSession session) {

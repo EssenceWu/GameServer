@@ -5,7 +5,7 @@ import com.player.framework.net.MessageRouter;
 import com.player.framework.net.PropertySession;
 import com.player.framework.orm.Mapper;
 import com.player.framework.orm.OrmFactory;
-import com.player.framework.orm.OrmNotifyFactory;
+import com.player.framework.orm.OrmAsyncFactory;
 import com.player.framework.util.ToolUtil;
 import com.player.game.Config;
 import com.player.game.Resonpose;
@@ -46,7 +46,8 @@ public class LoginServer {
 			user.setGuestKey(request.guestKey);
 			user.setIsGuest(1);
 			user.setStatus(1);
-			OrmNotifyFactory.add(session, UserMapper.class, "add", user);
+			int uuid = int.class.cast(session.getAttribute(PropertySession.UUID));
+			OrmAsyncFactory.notify(uuid, UserMapper.class, "add", user);
 			resGuestLogin.status = Resonpose.OK;
 			uinfo.unick = user.getUnick();
 			resGuestLogin.uinfo = uinfo;
