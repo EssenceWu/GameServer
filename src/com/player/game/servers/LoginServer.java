@@ -4,8 +4,8 @@ import com.player.framework.net.IdSession;
 import com.player.framework.net.MessageRouter;
 import com.player.framework.net.PropertySession;
 import com.player.game.Resonpose;
-import com.player.game.cache.GuestKeyCache;
-import com.player.game.cache.UnameCache;
+import com.player.game.cache.UserByGuestKeyCache;
+import com.player.game.cache.UserByUnameCache;
 import com.player.game.messages.login.AccountInfo;
 import com.player.game.messages.login.ReqGuestLogin;
 import com.player.game.messages.login.ReqUserLogin;
@@ -30,9 +30,9 @@ public class LoginServer {
 			MessageRouter.send(session, res);
 			return;
 		}
-		User user = GuestKeyCache.get(request.guestKey);
+		User user = UserByGuestKeyCache.get(request.guestKey);
 		if (user == null) {
-			user = GuestKeyCache.add(session, request.guestKey);
+			user = UserByGuestKeyCache.add(session, request.guestKey);
 			session.setAttribute(PropertySession.UID, user.getId());
 			res.status = Resonpose.OK;
 			uinfo.unick = user.getUnick();
@@ -64,7 +64,7 @@ public class LoginServer {
 			MessageRouter.send(session, res);
 			return;
 		}
-		User user = UnameCache.get(request.uname);
+		User user = UserByUnameCache.get(request.uname);
 		if (user == null || !request.upwd.equals(user.getUpwd())) {
 			res.status = Resonpose.UnameOrUpwdError;
 			res.uinfo = null;

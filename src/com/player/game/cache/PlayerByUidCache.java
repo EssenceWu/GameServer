@@ -11,12 +11,12 @@ import com.player.game.mappers.PlayerMapper;
 import com.player.game.messages.player.ReqSelectPlayer;
 import com.player.game.models.Player;
 
-public class UidCache extends CacheAdapter<Long, Player> {
+public class PlayerByUidCache extends CacheAdapter<Long, Player> {
 
-	public static UidCache uidPlayerCache = new UidCache();
+	public static PlayerByUidCache playerByUidCache = new PlayerByUidCache();
 
 	public static Player get(long uid) {
-		return uidPlayerCache.getCache(uid);
+		return playerByUidCache.getCache(uid);
 	}
 
 	public static Player add(IdSession session, long uid, ReqSelectPlayer request) {

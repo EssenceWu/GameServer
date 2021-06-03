@@ -11,12 +11,12 @@ import com.player.game.Config;
 import com.player.game.mappers.UserMapper;
 import com.player.game.models.User;
 
-public class GuestKeyCache extends CacheAdapter<String, User> {
+public class UserByGuestKeyCache extends CacheAdapter<String, User> {
 
-	public static GuestKeyCache guestKeyUserCache = new GuestKeyCache();
+	public static UserByGuestKeyCache userByGuestKeyCache = new UserByGuestKeyCache();
 
 	public static User get(String guestKey) {
-		return guestKeyUserCache.getCache(guestKey);
+		return userByGuestKeyCache.getCache(guestKey);
 	}
 
 	public static User add(IdSession session, String guestKey) {

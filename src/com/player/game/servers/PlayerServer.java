@@ -5,7 +5,7 @@ import com.player.framework.net.MessageRouter;
 import com.player.framework.net.PlayerSessionManager;
 import com.player.framework.net.PropertySession;
 import com.player.game.Resonpose;
-import com.player.game.cache.UidCache;
+import com.player.game.cache.PlayerByUidCache;
 import com.player.game.messages.player.PlayerInfo;
 import com.player.game.messages.player.ReqSelectPlayer;
 import com.player.game.messages.player.ResSelectPlayer;
@@ -28,9 +28,9 @@ public class PlayerServer {
 			return;
 		}
 		long uid = (long) object;
-		Player player = UidCache.get(uid);
+		Player player = PlayerByUidCache.get(uid);
 		if (player == null) {
-			player = UidCache.add(session, uid, request);
+			player = PlayerByUidCache.add(session, uid, request);
 		}
 		PlayerSessionManager.INSTANCE.setPlayerSession(player.getId(), session);
 		res.status = Resonpose.OK;

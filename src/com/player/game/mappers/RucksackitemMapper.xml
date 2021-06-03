@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.player.game.mappers.RucksackitemMapper">
+  <resultMap id="BaseResultMap" type="com.player.game.models.Rucksackitem">
+    <constructor>
+      <idArg column="ItemKey" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="id" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="ItemID" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="Count" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    ItemKey, id, ItemID, Count
+  </sql>
+  <select id="getList" parameterType="long" resultType="com.player.game.models.Rucksackitem">
+    select * from rucksackitem where id = #{id}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from rucksackitem
+    where ItemKey = #{itemkey,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.player.game.models.Rucksackitem">
+    insert into rucksackitem (ItemKey, id, ItemID, 
+      Count)
+    values (#{itemkey,jdbcType=INTEGER}, #{id,jdbcType=BIGINT}, #{itemid,jdbcType=INTEGER}, 
+      #{count,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.player.game.models.Rucksackitem">
+    insert into rucksackitem
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="itemkey != null">
+        ItemKey,
+      </if>
+      <if test="id != null">
+        id,
+      </if>
+      <if test="itemid != null">
+        ItemID,
+      </if>
+      <if test="count != null">
+        Count,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="itemkey != null">
+        #{itemkey,jdbcType=INTEGER},
+      </if>
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="itemid != null">
+        #{itemid,jdbcType=INTEGER},
+      </if>
+      <if test="count != null">
+        #{count,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.player.game.models.Rucksackitem">
+    update rucksackitem
+    <set>
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="itemid != null">
+        ItemID = #{itemid,jdbcType=INTEGER},
+      </if>
+      <if test="count != null">
+        Count = #{count,jdbcType=INTEGER},
+      </if>
+    </set>
+    where ItemKey = #{itemkey,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.player.game.models.Rucksackitem">
+    update rucksackitem
+    set id = #{id,jdbcType=BIGINT},
+      ItemID = #{itemid,jdbcType=INTEGER},
+      Count = #{count,jdbcType=INTEGER}
+    where ItemKey = #{itemkey,jdbcType=INTEGER}
+  </update>
+</mapper>
