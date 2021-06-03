@@ -8,7 +8,7 @@ import com.player.framework.serializer.Serializer;
 
 public class NettyProtocolEncoder extends MessageToByteEncoder<Message> {
 
-	final private int length = 10;
+	private final int length = 10;
 
 	protected void encode(ChannelHandlerContext ctx, Message message, ByteBuf out) throws Exception {
 		try {

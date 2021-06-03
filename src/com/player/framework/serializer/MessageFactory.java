@@ -31,7 +31,7 @@ public enum MessageFactory {
 				id2Clazz.put(key, clazz);
 				clazz2Id.put(clazz, key);
 			}
-			System.out.println("Loading message meta[" + result.size() + "] successfully!");
+			System.out.println("Loading message meta[" + id2Clazz.size() + "] successfully!");
 		} catch (Exception e) {
 			throw new Exception(e);
 		}

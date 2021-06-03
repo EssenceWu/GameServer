@@ -9,5 +9,6 @@ public class ServerPath {
 	public static String ORM_PATH = "mybatis.xml";
 	public static String DATABASE_PATH = "com.player.framework.annotation.database";
 	public static String QUARTZ_PATH = "quartz.properties";
+	public static String CONFIG_PATH = "com.player.game.config";
 
 }

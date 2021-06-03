@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.player.game.mappers.ConfigskillMapper">
+  <resultMap id="BaseResultMap" type="com.player.game.models.Configskill">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="skillId" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="buffTime" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="effect" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, skillId, buffTime, name, effect
+  </sql>
+  <select id="getList" resultType="com.player.game.models.Configskill">
+    select * from configskill
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from configskill
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.player.game.models.Configskill">
+    insert into configskill (id, skillId, buffTime, 
+      name, effect)
+    values (#{id,jdbcType=INTEGER}, #{skillid,jdbcType=INTEGER}, #{bufftime,jdbcType=INTEGER}, 
+      #{name,jdbcType=VARCHAR}, #{effect,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.player.game.models.Configskill">
+    insert into configskill
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="skillid != null">
+        skillId,
+      </if>
+      <if test="bufftime != null">
+        buffTime,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="effect != null">
+        effect,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="skillid != null">
+        #{skillid,jdbcType=INTEGER},
+      </if>
+      <if test="bufftime != null">
+        #{bufftime,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="effect != null">
+        #{effect,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.player.game.models.Configskill">
+    update configskill
+    <set>
+      <if test="skillid != null">
+        skillId = #{skillid,jdbcType=INTEGER},
+      </if>
+      <if test="bufftime != null">
+        buffTime = #{bufftime,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="effect != null">
+        effect = #{effect,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.player.game.models.Configskill">
+    update configskill
+    set skillId = #{skillid,jdbcType=INTEGER},
+      buffTime = #{bufftime,jdbcType=INTEGER},
+      name = #{name,jdbcType=VARCHAR},
+      effect = #{effect,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

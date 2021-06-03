@@ -11,18 +11,13 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 
 public class NettyProtocolDecoder extends ByteToMessageDecoder {
 
-	final private int length = 10;
-	private boolean threehalf = false;
+	private final int length = 10;
 
 	protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
 		try {
-			if (!threehalf) {
-				boolean half = in.readableBytes() < 2;
-				if (half) {
-					in.resetReaderIndex();
-					return;
-				}
-				threehalf = true;
+			if (in.readableBytes() < 2) {
+				in.resetReaderIndex();
+				return;
 			}
 			int length = in.readUnsignedShortLE();
 			if (in.readableBytes() >= length - 2) {
@@ -35,13 +30,12 @@ public class NettyProtocolDecoder extends ByteToMessageDecoder {
 					in.readBytes(body);
 				}
 				Message message = Serializer.decode(module, cmd, body);
-				if (message != null && module > 0) {
+				if (message != null) {
 					out.add(message);
 				}
 				in.markReaderIndex();
 			} else {
 				in.resetReaderIndex();
-				threehalf = false;
 			}
 		} catch (Exception e) {
 			throw new Exception(e);

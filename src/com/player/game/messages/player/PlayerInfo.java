@@ -2,7 +2,7 @@ package com.player.game.messages.player;
 
 import com.baidu.bjf.remoting.protobuf.annotation.Protobuf;
 
-public class PlayerInfoComponent {
+public class PlayerInfo {
 	@Protobuf(order = 1, required = true)
 	public int exp;
 

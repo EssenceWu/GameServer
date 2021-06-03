@@ -1,7 +1,6 @@
 package com.player.game.controllers;
 
 import com.player.framework.annotation.message.Controller;
-import com.player.framework.annotation.message.MessageMeta;
 import com.player.framework.annotation.message.RequestMapping;
 import com.player.framework.net.IdSession;
 import com.player.game.messages.login.ReqGuestLogin;
@@ -9,7 +8,6 @@ import com.player.game.messages.login.ReqUserLogin;
 import com.player.game.servers.LoginServer;
 
 @Controller
-@MessageMeta
 public class LoginController {
 
 	@RequestMapping

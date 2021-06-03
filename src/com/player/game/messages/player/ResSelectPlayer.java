@@ -12,8 +12,8 @@ public class ResSelectPlayer extends Message {
 	public int status;
 
 	@Protobuf(order = 2, required = true)
-	public PlayerInfoComponent playerInfo;
+	public PlayerInfo playerInfo;
 
 	@Protobuf(order = 3, required = true)
-	public EquipmentComponent eProp;
+	public Equipment eProp;
 }

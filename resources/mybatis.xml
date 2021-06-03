@@ -5,7 +5,7 @@
 <configuration>
 	<properties resource="db.properties" />
 	<environments default="User">
-		<environment id="User">
+		<environment id="UserSource">
 			<transactionManager type="JDBC" />
 			<dataSource type="POOLED">
 				<property name="driver" value="${driver}" />
@@ -14,7 +14,7 @@
 				<property name="password" value="${user_password}" />
 			</dataSource>
 		</environment>
-		<environment id="Data">
+		<environment id="DataSource">
 			<transactionManager type="JDBC" />
 			<dataSource type="POOLED">
 				<property name="driver" value="${driver}" />
@@ -25,7 +25,6 @@
 		</environment>
 	</environments>
 	<mappers>
-		<mapper class="com.player.game.mappers.UserMapper" />
-		<mapper class="com.player.game.mappers.PlayerMapper" />
+    	<package name="com.player.game.mappers"/>
 	</mappers>
 </configuration>

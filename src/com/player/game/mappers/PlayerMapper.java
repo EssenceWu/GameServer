@@ -1,13 +1,13 @@
 package com.player.game.mappers;
 
-import com.player.game.models.PlayerModel;
+import com.player.framework.annotation.database.UserSource;
+import com.player.game.models.Player;
 
+@UserSource
 public interface PlayerMapper {
 
-	public PlayerModel getPlayerById(long id);
+	public Player getPlayerByUid(long uid);
 
-	public PlayerModel getPlayerByUid(long uid);
-
-	public void add(PlayerModel playerModel);
+	public void add(Player playerModel);
 
 }

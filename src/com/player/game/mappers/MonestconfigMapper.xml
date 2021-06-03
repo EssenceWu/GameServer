@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.player.game.mappers.MonestconfigMapper">
+  <resultMap id="BaseResultMap" type="com.player.game.models.Monestconfig">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="name" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="speed" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="attack" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="def" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="hp" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="exp" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="desic" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, name, speed, attack, def, hp, exp, desic
+  </sql>
+  <select id="getList" resultType="com.player.game.models.Monestconfig">
+    select * from monestconfig
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from monestconfig
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.player.game.models.Monestconfig">
+    insert into monestconfig (id, name, speed, 
+      attack, def, hp, exp, 
+      desic)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{speed,jdbcType=INTEGER}, 
+      #{attack,jdbcType=INTEGER}, #{def,jdbcType=INTEGER}, #{hp,jdbcType=INTEGER}, #{exp,jdbcType=INTEGER}, 
+      #{desic,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.player.game.models.Monestconfig">
+    insert into monestconfig
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="speed != null">
+        speed,
+      </if>
+      <if test="attack != null">
+        attack,
+      </if>
+      <if test="def != null">
+        def,
+      </if>
+      <if test="hp != null">
+        hp,
+      </if>
+      <if test="exp != null">
+        exp,
+      </if>
+      <if test="desic != null">
+        desic,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="speed != null">
+        #{speed,jdbcType=INTEGER},
+      </if>
+      <if test="attack != null">
+        #{attack,jdbcType=INTEGER},
+      </if>
+      <if test="def != null">
+        #{def,jdbcType=INTEGER},
+      </if>
+      <if test="hp != null">
+        #{hp,jdbcType=INTEGER},
+      </if>
+      <if test="exp != null">
+        #{exp,jdbcType=INTEGER},
+      </if>
+      <if test="desic != null">
+        #{desic,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.player.game.models.Monestconfig">
+    update monestconfig
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="speed != null">
+        speed = #{speed,jdbcType=INTEGER},
+      </if>
+      <if test="attack != null">
+        attack = #{attack,jdbcType=INTEGER},
+      </if>
+      <if test="def != null">
+        def = #{def,jdbcType=INTEGER},
+      </if>
+      <if test="hp != null">
+        hp = #{hp,jdbcType=INTEGER},
+      </if>
+      <if test="exp != null">
+        exp = #{exp,jdbcType=INTEGER},
+      </if>
+      <if test="desic != null">
+        desic = #{desic,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.player.game.models.Monestconfig">
+    update monestconfig
+    set name = #{name,jdbcType=VARCHAR},
+      speed = #{speed,jdbcType=INTEGER},
+      attack = #{attack,jdbcType=INTEGER},
+      def = #{def,jdbcType=INTEGER},
+      hp = #{hp,jdbcType=INTEGER},
+      exp = #{exp,jdbcType=INTEGER},
+      desic = #{desic,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

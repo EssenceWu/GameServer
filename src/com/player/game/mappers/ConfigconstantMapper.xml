@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.player.game.mappers.ConfigconstantMapper">
+  <resultMap id="BaseResultMap" type="com.player.game.models.Configconstant">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="intValue" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="StringValue" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="descrpition" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, intValue, StringValue, descrpition
+  </sql>
+  <select id="getList" resultType="com.player.game.models.Configconstant">
+    select * from configconstant
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from configconstant
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.player.game.models.Configconstant">
+    insert into configconstant (id, intValue, StringValue, 
+      descrpition)
+    values (#{id,jdbcType=INTEGER}, #{intvalue,jdbcType=INTEGER}, #{stringvalue,jdbcType=VARCHAR}, 
+      #{descrpition,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.player.game.models.Configconstant">
+    insert into configconstant
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="intvalue != null">
+        intValue,
+      </if>
+      <if test="stringvalue != null">
+        StringValue,
+      </if>
+      <if test="descrpition != null">
+        descrpition,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="intvalue != null">
+        #{intvalue,jdbcType=INTEGER},
+      </if>
+      <if test="stringvalue != null">
+        #{stringvalue,jdbcType=VARCHAR},
+      </if>
+      <if test="descrpition != null">
+        #{descrpition,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.player.game.models.Configconstant">
+    update configconstant
+    <set>
+      <if test="intvalue != null">
+        intValue = #{intvalue,jdbcType=INTEGER},
+      </if>
+      <if test="stringvalue != null">
+        StringValue = #{stringvalue,jdbcType=VARCHAR},
+      </if>
+      <if test="descrpition != null">
+        descrpition = #{descrpition,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.player.game.models.Configconstant">
+    update configconstant
+    set intValue = #{intvalue,jdbcType=INTEGER},
+      StringValue = #{stringvalue,jdbcType=VARCHAR},
+      descrpition = #{descrpition,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

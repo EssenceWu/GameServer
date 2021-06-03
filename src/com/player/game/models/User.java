@@ -1,12 +1,12 @@
 package com.player.game.models;
 
-public class UserModel {
+public class User {
 
-	public UserModel() {
+	public User() {
 		super();
 	}
 
-	public UserModel(long id, String uname, String upwd, String unick, String guestKey, int isGuest, int status) {
+	public User(long id, String uname, String upwd, String unick, String guestKey, int isGuest, int status) {
 		super();
 		this.id = id;
 		this.uname = uname;

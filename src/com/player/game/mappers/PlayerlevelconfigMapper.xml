@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.player.game.mappers.PlayerlevelconfigMapper">
+  <resultMap id="BaseResultMap" type="com.player.game.models.Playerlevelconfig">
+    <constructor>
+      <arg column="level" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="needExp" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="HP" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="MP" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="Attack" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="Def" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    </constructor>
+  </resultMap>
+  <select id="getList" resultType="com.player.game.models.Playerlevelconfig">
+  	select * from playerlevelconfig;
+  </select>
+  <insert id="insert" parameterType="com.player.game.models.Playerlevelconfig">
+    insert into playerlevelconfig (level, needExp, HP, 
+      MP, Attack, Def)
+    values (#{level,jdbcType=INTEGER}, #{needexp,jdbcType=INTEGER}, #{hp,jdbcType=INTEGER}, 
+      #{mp,jdbcType=INTEGER}, #{attack,jdbcType=INTEGER}, #{def,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.player.game.models.Playerlevelconfig">
+    insert into playerlevelconfig
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="level != null">
+        level,
+      </if>
+      <if test="needexp != null">
+        needExp,
+      </if>
+      <if test="hp != null">
+        HP,
+      </if>
+      <if test="mp != null">
+        MP,
+      </if>
+      <if test="attack != null">
+        Attack,
+      </if>
+      <if test="def != null">
+        Def,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="level != null">
+        #{level,jdbcType=INTEGER},
+      </if>
+      <if test="needexp != null">
+        #{needexp,jdbcType=INTEGER},
+      </if>
+      <if test="hp != null">
+        #{hp,jdbcType=INTEGER},
+      </if>
+      <if test="mp != null">
+        #{mp,jdbcType=INTEGER},
+      </if>
+      <if test="attack != null">
+        #{attack,jdbcType=INTEGER},
+      </if>
+      <if test="def != null">
+        #{def,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+</mapper>

@@ -53,7 +53,7 @@ public enum MessageDispatcherFactory implements IoDispatcher {
 					}
 				}
 			}
-			System.out.println("Loading message executor[" + result.size() + "] successfully!");
+			System.out.println("Loading message executor[" + container.size() + "] successfully!");
 		} catch (Exception e) {
 			throw new Exception(e);
 		}

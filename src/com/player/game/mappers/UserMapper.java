@@ -1,15 +1,15 @@
 package com.player.game.mappers;
 
-import com.player.framework.annotation.database.User;
-import com.player.game.models.UserModel;
+import com.player.framework.annotation.database.UserSource;
+import com.player.game.models.User;
 
-@User
+@UserSource
 public interface UserMapper {
 
-	public UserModel getUserbyGuestKey(String guestKey);
+	public User getUserbyGuestKey(String guestKey);
 
-	public UserModel getUserByUname(String uname);
+	public User getUserByUname(String uname);
 
-	public void add(UserModel user);
+	public void add(User user);
 
 }

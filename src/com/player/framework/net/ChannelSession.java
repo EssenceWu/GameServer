@@ -21,7 +21,7 @@ public class ChannelSession {
 	}
 
 	public static String getIp(Channel channel) {
-		return ((InetSocketAddress) channel.remoteAddress()).getAddress().toString().substring(1);
+		return InetSocketAddress.class.cast(channel.remoteAddress()).getAddress().toString().substring(1);
 	}
 
 }
