@@ -30,8 +30,11 @@ public class Serializer {
 	public static Message decode(short module, short cmd, byte[] body) throws Exception {
 		try {
 			Class<?> clazz = MessageFactory.INSTANCE.getMessage(module, cmd);
-			if (body == null || clazz == null) {
+			if (clazz == null) {
 				return null;
+			}
+			if (body == null) {
+				return Message.class.cast(clazz.getDeclaredConstructor().newInstance());
 			}
 			Codec<?> codec = ProtobufProxy.create(clazz);
 			return (Message) codec.decode(body);

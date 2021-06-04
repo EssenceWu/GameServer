@@ -16,4 +16,8 @@ public interface Cmd {
 	int ReqSelectPlayer = 5;
 	int ResSelectPlayer = 6;
 
+	// Íæ¼Ò±³°ü
+	int ReqRuckSack = 7;
+	int ResRuckSack = 8;
+
 }

@@ -35,9 +35,9 @@ public class UserByGuestKeyCache extends CacheAdapter<String, User> {
 	public User loadCache(String guestKey) {
 		Mapper mapper = OrmFactory.INSTANCE.getMapper(UserMapper.class);
 		UserMapper userMapper = UserMapper.class.cast(mapper.getObject());
-		User userModel = userMapper.getUserbyGuestKey(guestKey);
+		User user = userMapper.getUserbyGuestKey(guestKey);
 		mapper.close();
-		return userModel;
+		return user;
 	}
 
 }
